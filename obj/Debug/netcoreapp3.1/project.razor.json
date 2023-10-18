@@ -14447,8 +14447,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Daniela\\Downloads\\Biblioteca - netcore3.1\\Biblioteca\\Views\\Usuarios\\RegistrarUsuarios.cshtml",
+      "TargetPath": "Views\\Usuarios\\RegistrarUsuarios.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Daniela\\Downloads\\Biblioteca - netcore3.1\\Biblioteca\\Views\\Usuarios\\ListadeUsuarios.cshtml",
+      "TargetPath": "Views\\Usuarios\\ListadeUsuarios.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Daniela\\Downloads\\Biblioteca - netcore3.1\\Biblioteca\\Views\\Livro\\Cadastro.cshtml",
       "TargetPath": "Views\\Livro\\Cadastro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Daniela\\Downloads\\Biblioteca - netcore3.1\\Biblioteca\\Views\\Usuarios\\Administrador.cshtml",
+      "TargetPath": "Views\\Usuarios\\Administrador.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Daniela\\Downloads\\Biblioteca - netcore3.1\\Biblioteca\\Views\\Usuarios\\EditarUsuario.cshtml",
+      "TargetPath": "Views\\Usuarios\\EditarUsuario.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -25,6 +25,7 @@ namespace Biblioteca.Models
                 emprestimo.LivroId = e.LivroId;
                 emprestimo.DataEmprestimo = e.DataEmprestimo;
                 emprestimo.DataDevolucao = e.DataDevolucao;
+                emprestimo.Devolvido = e.Devolvido;
 
                 bc.SaveChanges();
             }
@@ -42,12 +43,14 @@ namespace Biblioteca.Models
                     switch(filtro.TipoFiltro)
                     {
                         case "Usuario":
-                            query = bc.Emprestimos.Where(e => e.NomeUsuario.Contains(filtro.Filtro));
-                        break;
+                            query = bc.Emprestimos.Where(e => e.NomeUsuario.ToLower().Contains(filtro.Filtro.ToLower()));
+                            break;
 
                         case "Livro":
-                            query = bc.Emprestimos.Where(e => e.Livro.Titulo.Contains(filtro.Filtro));
-                        break;
+                            query = bc.Emprestimos
+                            .Where(e => e.Livro.Titulo.ToLower().Contains(filtro.Filtro.ToLower()) ||
+                            e.Livro.Autor.ToLower().Contains(filtro.Filtro.ToLower()));
+                            break;
 
                         default:
                             query = bc.Emprestimos;
@@ -60,7 +63,7 @@ namespace Biblioteca.Models
                     query = bc.Emprestimos;
                 }
                 
-                return query.Include(e => e.Livro).ToList();               
+                return query.Include(e => e.Livro).OrderByDescending(e => e.DataDevolucao).ToList();               
                 
                 
             }
